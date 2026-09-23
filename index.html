@@ -40,7 +40,7 @@
 }
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 html, body { height: 100%; }
-body { font: 12px/1.5 var(--ui); color: var(--text); background: var(--desk); overflow: hidden; -webkit-font-smoothing: none; }
+body { font: 13px/1.55 var(--ui); color: var(--text); background: var(--desk); overflow: hidden; -webkit-font-smoothing: antialiased; }
 button { font: inherit; color: inherit; }
 [hidden] { display: none !important; }
 
@@ -49,6 +49,9 @@ button { font: inherit; color: inherit; }
   background: radial-gradient(120% 90% at 70% 10%, var(--desk2), var(--desk) 60%); }
 .wall { position: absolute; inset: 0; pointer-events: none; }
 .wall svg { width: 100%; height: 100%; display: block; }
+.drift { animation: drift 70s ease-in-out infinite alternate; }
+.drift.slow { animation-duration: 120s; animation-direction: alternate-reverse; }
+@keyframes drift { from { transform: translateX(-35px); } to { transform: translateX(45px); } }
 .wall-sky, .wall-dream, .wall-holo { display: none; }
 [data-theme="sky"] .wall-sky, [data-theme="dream"] .wall-dream, [data-theme="holo"] .wall-holo { display: block; }
 .watermark { position: absolute; right: 18px; bottom: 14px; text-align: right; font-family: var(--px); color: #fff; opacity: .85; pointer-events: none; line-height: .9; }
@@ -58,7 +61,7 @@ button { font: inherit; color: inherit; }
 #icons { position: absolute; top: 8px; left: 6px; bottom: 8px; display: flex; flex-direction: column; flex-wrap: wrap; align-content: flex-start; gap: 4px; }
 .dicon { width: 78px; padding: 4px 2px; display: flex; flex-direction: column; align-items: center; gap: 3px; background: none; border: 0; cursor: pointer; color: #fff; }
 .dicon svg { width: 34px; height: 34px; image-rendering: pixelated; filter: drop-shadow(1px 1px 0 rgba(0,0,0,.25)); }
-.dicon span { font-size: 11px; line-height: 1.2; padding: 1px 3px; text-align: center; text-shadow: 1px 1px 0 rgba(0,0,0,.45); word-break: break-word; }
+.dicon span { font-size: 12px; line-height: 1.2; padding: 1px 3px; text-align: center; text-shadow: 1px 1px 0 rgba(0,0,0,.45); word-break: break-word; }
 .dicon:focus-visible span, .dicon.sel span { background: var(--sel); color: var(--sel-fg); outline: 1px dotted #fff; text-shadow: none; }
 .dicon:focus { outline: none; }
 
@@ -69,7 +72,7 @@ button { font: inherit; color: inherit; }
   background: linear-gradient(90deg, var(--title1), var(--title2)); cursor: move; user-select: none; touch-action: none; }
 .win:not(.focused) .win-title { background: linear-gradient(90deg, var(--title-off1), var(--title-off2)); }
 .win-title svg { width: 16px; height: 16px; flex: none; }
-.win-title h2 { flex: 1; font: 500 13px/1 var(--px); letter-spacing: .02em; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.win-title h2 { flex: 1; font: 500 14px/1 var(--px); letter-spacing: .03em; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
 .tbtn { width: 18px; height: 16px; flex: none; display: grid; place-items: center; background: var(--face); box-shadow: var(--out); border: 0; cursor: pointer; color: var(--text); padding: 0; }
 .tbtn:active { box-shadow: var(--in); }
 .tbtn svg { width: 10px; height: 10px; }
@@ -102,16 +105,16 @@ button { font: inherit; color: inherit; }
 .field { width: 100%; background: var(--field); border: 0; box-shadow: var(--in); padding: 3px 8px; font: 22px/1.1 var(--mono); color: var(--text); }
 .field:focus { outline: 1px dotted var(--text); outline-offset: -4px; }
 .field.sm { font: 12px/1.4 var(--ui); padding: 5px 8px; }
-label.lbl, .lbl { display: block; font-size: 11px; color: var(--text2); margin-bottom: 3px; }
+label.lbl, .lbl { display: block; font-size: 12px; color: var(--text2); margin-bottom: 3px; }
 fieldset.grp { border: 0; box-shadow: inset 1px 1px var(--sh), inset -1px -1px var(--hi), 1px 1px 0 var(--hi); padding: 14px 12px 12px; margin: 10px 0 12px; position: relative; }
-fieldset.grp > legend { font: 500 12px/1 var(--px); padding: 0 4px; background: var(--face); position: absolute; top: -6px; left: 8px; }
+fieldset.grp > legend { font: 700 12px/1 var(--ui); padding: 0 4px; background: var(--face); position: absolute; top: -6px; left: 8px; }
 .sunk { background: var(--field); box-shadow: var(--in); padding: 10px 12px; }
 .grid2 { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
 .grid3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; }
-h3.px { font: 500 20px/1.1 var(--px); margin-bottom: 2px; }
-.sub { color: var(--text2); font-size: 11px; margin-bottom: 12px; }
+h3.px { font: 500 22px/1.15 var(--px); letter-spacing: .02em; margin-bottom: 2px; }
+.sub { color: var(--text2); font-size: 12.5px; margin-bottom: 12px; }
 .muted { color: var(--text2); }
-.why { color: var(--text2); font-style: italic; font-size: 11px; }
+.why { color: var(--text2); font-style: italic; font-size: 12.5px; }
 .num { font-family: var(--mono); font-size: 17px; line-height: 1; }
 
 /* tabs (Win98 tab strip) */
@@ -134,7 +137,7 @@ h3.px { font: 500 20px/1.1 var(--px); margin-bottom: 2px; }
 .params .v.num { font-weight: 400; font-size: 20px; }
 
 /* accordion */
-.acc { width: 100%; display: flex; align-items: center; gap: 8px; background: var(--face); box-shadow: var(--out); border: 0; padding: 6px 10px; cursor: pointer; font: 500 13px var(--px); text-align: left; }
+.acc { width: 100%; display: flex; align-items: center; gap: 8px; background: var(--face); box-shadow: var(--out); border: 0; padding: 6px 10px; cursor: pointer; font: 700 13px var(--ui); text-align: left; }
 .acc .pm { width: 11px; height: 11px; flex: none; background: var(--field); box-shadow: inset 0 0 0 1px var(--sh-dk); position: relative; }
 .acc .pm::before, .acc .pm::after { content: ''; position: absolute; background: var(--text); left: 2px; right: 2px; top: 5px; height: 1px; }
 .acc .pm::after { left: 5px; right: auto; width: 1px; top: 2px; bottom: 2px; height: auto; }
@@ -236,11 +239,9 @@ body.fx #fx { display: block; }
 #fx::after { content: ''; position: absolute; inset: 0; opacity: .09; background-size: 120px 120px;
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 256 256'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
   box-shadow: inset 0 0 120px rgba(40,10,60,.35); }
-body.fx .win-title h2, body.fx .dicon span, body.fx h3.px, body.fx .watermark, body.fx #boot .logo, body.fx .lcd .big {
-  text-shadow: -1.5px 0 rgba(255,40,120,.55), 1.5px 0 rgba(40,200,255,.55); }
-body.fx .dicon span { text-shadow: -1px 0 rgba(255,40,120,.6), 1px 0 rgba(40,200,255,.6), 1px 1px 0 rgba(0,0,0,.4); }
-body.fx #desktop { animation: flicker 6s infinite steps(1); }
-@keyframes flicker { 0%, 96%, 100% { filter: none; } 97% { filter: hue-rotate(8deg) saturate(1.2); transform: translateX(1px); } 98% { transform: translateX(-1px); } }
+body.fx .watermark, body.fx #boot .logo {
+  text-shadow: -2px 0 rgba(255,40,120,.55), 2px 0 rgba(40,200,255,.55); }
+body.fx .lcd .big { text-shadow: 0 0 6px color-mix(in srgb, var(--lcd-fg) 60%, transparent), -1px 0 rgba(255,40,120,.35), 1px 0 rgba(40,200,255,.35); }
 
 /* ── phones: windows go fullscreen ────────────────────── */
 @media (max-width: 700px) {
@@ -271,23 +272,66 @@ body.fx #desktop { animation: flicker 6s infinite steps(1); }
 <div id="desktop">
   <div class="wall wall-sky" aria-hidden="true">
     <svg viewBox="0 0 1000 700" preserveAspectRatio="xMidYMid slice" shape-rendering="crispEdges">
-      <g fill="#fff" opacity=".45">
-        <rect x="620" y="90" width="160" height="20"/><rect x="600" y="110" width="220" height="20"/><rect x="640" y="70" width="80" height="20"/><rect x="580" y="130" width="260" height="16"/>
-        <rect x="180" y="380" width="120" height="16"/><rect x="160" y="396" width="190" height="16"/><rect x="200" y="364" width="60" height="16"/>
-        <rect x="700" y="470" width="140" height="18"/><rect x="680" y="488" width="200" height="18"/><rect x="720" y="452" width="70" height="18"/>
+      <defs>
+        <radialGradient id="sun"><stop offset="0" stop-color="#fff6d8"/><stop offset=".4" stop-color="#ffe3f0" stop-opacity=".85"/><stop offset="1" stop-color="#ffe3f0" stop-opacity="0"/></radialGradient>
+        <linearGradient id="sg" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#ffc6e2" stop-opacity=".1"/><stop offset="1" stop-color="#ffc6e2" stop-opacity=".6"/></linearGradient>
+        <g id="cl">
+          <rect x="60" y="0" width="80" height="20" fill="#fff"/><rect x="150" y="10" width="50" height="12" fill="#fff"/>
+          <rect x="30" y="20" width="180" height="20" fill="#fff"/><rect x="0" y="40" width="260" height="20" fill="#fff"/>
+          <rect x="12" y="60" width="236" height="12" fill="#d6e9ff"/><rect x="40" y="72" width="170" height="6" fill="#c3dcfa"/>
+        </g>
+      </defs>
+      <circle cx="870" cy="110" r="130" fill="url(#sun)" shape-rendering="auto"/>
+      <g fill="none" stroke-width="9" opacity=".5">
+        <path d="M200 545 A230 230 0 0 1 660 545" stroke="#ff9ec8"/><path d="M209 545 A221 221 0 0 1 651 545" stroke="#ffd59e"/>
+        <path d="M218 545 A212 212 0 0 1 642 545" stroke="#fff3a0"/><path d="M227 545 A203 203 0 0 1 633 545" stroke="#b8f0c8"/>
+        <path d="M236 545 A194 194 0 0 1 624 545" stroke="#a8d8ff"/><path d="M245 545 A185 185 0 0 1 615 545" stroke="#c9a8f0"/>
       </g>
-      <g fill="#ffd6e8" opacity=".5"><rect x="860" y="220" width="6" height="6"/><rect x="420" y="160" width="4" height="4"/><rect x="320" y="90" width="6" height="6"/><rect x="520" y="560" width="4" height="4"/></g>
+      <g opacity=".55">
+        <g class="drift slow"><use href="#cl" transform="translate(140 300) scale(.6)"/></g>
+        <g class="drift"><use href="#cl" transform="translate(460 170) scale(.45)"/></g>
+      </g>
+      <g fill="none" stroke="#5a7fb8" stroke-width="2" opacity=".6">
+        <path d="M560 230 l6 5 l6 -5"/><path d="M580 220 l5 4 l5 -4"/><path d="M548 212 l4 3 l4 -3"/>
+      </g>
+      <rect x="0" y="540" width="1000" height="160" fill="url(#sg)"/>
+      <g id="sky-grid" stroke="#fff" stroke-width="1.5" opacity=".45" shape-rendering="auto"></g>
+      <rect x="0" y="538" width="1000" height="3" fill="#fff" opacity=".7"/>
+      <g id="sky-sparkles"></g>
+      <g opacity=".8">
+        <g class="drift"><use href="#cl" transform="translate(600 70)"/></g>
+        <g class="drift slow"><use href="#cl" transform="translate(690 440) scale(.8)"/></g>
+        <g class="drift"><use href="#cl" transform="translate(-40 610) scale(.9)"/></g>
+      </g>
     </svg>
   </div>
   <div class="wall wall-dream" aria-hidden="true">
     <svg viewBox="0 0 1000 700" preserveAspectRatio="xMidYMid slice" shape-rendering="crispEdges">
       <defs><linearGradient id="dg" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#b9a2ee"/><stop offset=".65" stop-color="#e3b8ea"/><stop offset="1" stop-color="#f7c6de"/></linearGradient></defs>
+      <defs><linearGradient id="ss" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#fff" stop-opacity="0"/><stop offset="1" stop-color="#fff"/></linearGradient></defs>
       <rect width="1000" height="700" fill="url(#dg)"/>
+      <g id="dream-stars" fill="#fff"></g>
+      <line x1="540" y1="120" x2="650" y2="62" stroke="url(#ss)" stroke-width="3" shape-rendering="auto"/>
+      <rect x="648" y="59" width="6" height="6" fill="#fff"/>
+      <circle cx="760" cy="170" r="70" fill="#fff" opacity=".18" shape-rendering="auto"/>
       <circle cx="760" cy="170" r="62" fill="#fff7fd"/><circle cx="790" cy="150" r="58" fill="#c9aef0"/>
-      <g fill="#fff"><rect x="220" y="110" width="4" height="4"/><rect x="420" y="70" width="6" height="6"/><rect x="600" y="260" width="4" height="4"/><rect x="900" y="80" width="6" height="6"/><rect x="120" y="240" width="4" height="4"/><rect x="520" y="150" width="4" height="4"/>
-        <rect x="336" y="200" width="2" height="10"/><rect x="332" y="204" width="10" height="2"/></g>
+      <g transform="translate(200 150)">
+        <circle r="24" fill="#f7c6de"/><rect x="-24" y="-3" width="48" height="5" fill="#e6a4cc"/><rect x="-20" y="8" width="40" height="4" fill="#e6a4cc"/>
+        <ellipse rx="44" ry="9" fill="none" stroke="#fff" stroke-width="3" opacity=".85" transform="rotate(-18)" shape-rendering="auto"/>
+      </g>
+      <g id="dream-city" opacity=".85"></g>
       <g fill="#9a7fe0" opacity=".75"><rect x="0" y="560" width="1000" height="140"/><rect x="40" y="530" width="220" height="30"/><rect x="90" y="505" width="120" height="25"/><rect x="560" y="520" width="300" height="40"/><rect x="620" y="490" width="160" height="30"/></g>
       <g fill="#b99af0" opacity=".8"><rect x="0" y="610" width="1000" height="90"/><rect x="300" y="585" width="240" height="25"/><rect x="820" y="590" width="180" height="20"/></g>
+      <g fill="#5f46ad"><rect x="905" y="250" width="9" height="400"/><rect x="872" y="272" width="76" height="6"/><rect x="884" y="300" width="52" height="5"/>
+        <rect x="874" y="266" width="4" height="6"/><rect x="942" y="266" width="4" height="6"/><rect x="886" y="294" width="4" height="6"/><rect x="930" y="294" width="4" height="6"/></g>
+      <g fill="none" stroke="#5f46ad" stroke-width="2" opacity=".85" shape-rendering="auto">
+        <path d="M876 268 Q 560 360 -20 300"/><path d="M944 268 Q 985 292 1020 290"/>
+        <path d="M888 296 Q 560 400 -20 350"/><path d="M932 296 Q 980 322 1020 320"/>
+      </g>
+      <g fill="#fbe3f5" opacity=".7">
+        <g class="drift slow"><rect x="120" y="330" width="90" height="12"/><rect x="100" y="342" width="150" height="12"/><rect x="130" y="354" width="80" height="8" fill="#e9c6ef"/></g>
+        <g class="drift"><rect x="420" y="250" width="70" height="10"/><rect x="400" y="260" width="120" height="10"/></g>
+      </g>
     </svg>
   </div>
   <div class="wall wall-holo" aria-hidden="true">
@@ -302,8 +346,18 @@ body.fx #desktop { animation: flicker 6s infinite steps(1); }
           <feDisplacementMap in="SourceGraphic" scale="260" xChannelSelector="R" yChannelSelector="G"/>
           <feGaussianBlur stdDeviation="3"/>
         </filter>
+        <radialGradient id="bub" cx=".35" cy=".3" r=".75"><stop offset="0" stop-color="#fff" stop-opacity=".9"/><stop offset=".22" stop-color="#fff" stop-opacity=".12"/><stop offset="1" stop-color="#d8f4ff" stop-opacity=".3"/></radialGradient>
+        <linearGradient id="iri" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ffb3e0"/><stop offset=".5" stop-color="#a8f0ff"/><stop offset="1" stop-color="#fff3a8"/></linearGradient>
+        <linearGradient id="gloss" x1="0" y1="0" x2="1" y2="1"><stop offset=".3" stop-color="#fff" stop-opacity="0"/><stop offset=".48" stop-color="#fff" stop-opacity=".22"/><stop offset=".52" stop-color="#fff" stop-opacity=".08"/><stop offset=".7" stop-color="#fff" stop-opacity="0"/></linearGradient>
       </defs>
       <rect x="-150" y="-150" width="1300" height="1000" fill="url(#hg)" filter="url(#warp)"/>
+      <rect width="1000" height="700" fill="url(#gloss)"/>
+      <g opacity=".22" shape-rendering="crispEdges">
+        <g transform="translate(640 50)"><rect width="300" height="200" fill="#fff"/><rect x="3" y="3" width="294" height="16" fill="#0b4fd1"/><rect x="8" y="26" width="284" height="166" fill="#b9d4ff"/></g>
+        <g transform="translate(560 320)"><rect width="220" height="150" fill="#fff"/><rect x="3" y="3" width="214" height="16" fill="#ff8ab8"/><rect x="8" y="26" width="204" height="116" fill="#e6d4ff"/></g>
+        <g transform="translate(820 290)"><rect width="150" height="70" fill="#fff"/><rect x="3" y="3" width="144" height="14" fill="#0b4fd1"/><rect x="12" y="30" width="16" height="16" fill="#ff5a7a"/><rect x="38" y="34" width="90" height="4" fill="#4d4b60"/><rect x="38" y="42" width="60" height="4" fill="#4d4b60"/></g>
+      </g>
+      <g id="holo-bits" shape-rendering="auto"></g>
     </svg>
   </div>
   <div class="watermark" aria-hidden="true"><span>coffee edition</span><b>breu 98</b></div>
@@ -503,6 +557,7 @@ body.fx #desktop { animation: flicker 6s infinite steps(1); }
 <template id="t-readme">
   <div class="sunk" style="font:18px/1.35 var(--mono); white-space:pre-wrap; min-height:100%;">breu 98 — coffee edition
 ========================
+created by Yirschen
 
 Brew.exe     ratios, water &amp; yield for 13 methods,
              step-by-step guides and dial-in tips
@@ -515,7 +570,9 @@ Music        lo-fi chiptunes while you wait for the bloom
 Built on SCA brewing science.
 All calculations are estimates.
 
-tip: Start → Display Properties to change themes.</div>
+tip: Start → Display Properties to change themes.
+
+(c) Yirschen. made with love and too much coffee.</div>
 </template>
 <script>
 const METHODS = {
@@ -1083,7 +1140,8 @@ const store = {
   get(k, d) { try { const v = localStorage.getItem('breu98:' + k); return v == null ? d : JSON.parse(v); } catch { return d; } },
   set(k, v) { try { localStorage.setItem('breu98:' + k, JSON.stringify(v)); } catch {} },
 };
-const settings = Object.assign({ theme: 'sky', fx: true, pop: true, snd: false }, store.get('settings', {}));
+const settings = Object.assign({ theme: 'sky', fx: true, pop: true, snd: true }, store.get('settings', {}));
+if (settings.v !== 2) { settings.snd = true; settings.v = 2; }
 const saveSettings = () => store.set('settings', settings);
 
 // ── PIXEL ICONS ───────────────────────────────────────────────────────────────
@@ -1815,6 +1873,45 @@ APPS.music.onClose = mpStop;
 
 // ── INIT ──────────────────────────────────────────────────────────────────────
 
+function decorateWalls() {
+  let s = 7;
+  const rnd = () => (s = (s * 16807) % 2147483647) / 2147483647;
+  const spark = (x, y, u, c, o) => `<g fill="${c}" opacity="${o.toFixed(2)}"><rect x="${x}" y="${y - 2 * u}" width="${u}" height="${5 * u}"/><rect x="${x - 2 * u}" y="${y}" width="${5 * u}" height="${u}"/></g>`;
+  const heart = (x, y, k) => `<path transform="translate(${x} ${y}) scale(${k.toFixed(2)})" fill="#ffb3d6" d="M-6 -4h4v-2h4v2h4v4h-2v2h-2v2h-2v2h-2v-2h-2v-2h-2v-2h-2z"/>`;
+
+  let h = '';
+  for (let i = 0; i < 24; i++) h += spark(150 + rnd() * 850 | 0, rnd() * 500 | 0, rnd() < .3 ? 3 : 2, rnd() < .5 ? '#fff' : '#ffd6ec', .55 + rnd() * .4);
+  for (let i = 0; i < 6; i++) h += heart(150 + rnd() * 850 | 0, 60 + rnd() * 420 | 0, .8 + rnd() * .6);
+  $('#sky-sparkles').innerHTML = h;
+
+  let g = '';
+  for (let xb = -1480; xb <= 2480; xb += 110) g += `<line x1="${(500 + (xb - 500) * .12).toFixed(1)}" y1="540" x2="${xb}" y2="700"/>`;
+  for (let k = 1; k <= 9; k++) { const y = (540 + 160 * (k / 9) ** 2).toFixed(1); g += `<line x1="0" y1="${y}" x2="1000" y2="${y}"/>`; }
+  $('#sky-grid').innerHTML = g;
+
+  let st = '';
+  for (let i = 0; i < 70; i++) { const z = rnd() < .8 ? 2 : 4; st += `<rect x="${rnd() * 1000 | 0}" y="${rnd() * 440 | 0}" width="${z}" height="${z}" opacity="${(.4 + rnd() * .6).toFixed(2)}"/>`; }
+  for (let i = 0; i < 8; i++) st += spark(150 + rnd() * 850 | 0, 20 + rnd() * 380 | 0, 2, '#fff', .9);
+  $('#dream-stars').innerHTML = st;
+
+  let c = '', x = -10;
+  while (x < 1010) {
+    const w = 30 + rnd() * 50 | 0, hh = 50 + rnd() * 120 | 0, top = 560 - hh;
+    c += `<rect x="${x}" y="${top}" width="${w}" height="${hh}" fill="#8c72d8"/>`;
+    for (let wy = top + 8; wy < 548; wy += 14)
+      for (let wx = x + 6; wx < x + w - 8; wx += 12)
+        if (rnd() < .28) c += `<rect x="${wx}" y="${wy}" width="5" height="6" fill="#ffe9b0" opacity=".85"/>`;
+    x += w + (rnd() * 6 | 0);
+  }
+  $('#dream-city').innerHTML = c;
+
+  let b = '';
+  for (let i = 0; i < 9; i++) b += `<circle cx="${200 + rnd() * 800 | 0}" cy="${rnd() * 650 | 0}" r="${14 + rnd() * 46 | 0}" fill="url(#bub)" stroke="url(#iri)" stroke-width="2" opacity=".75"/>`;
+  for (let i = 0; i < 16; i++) b += spark(150 + rnd() * 850 | 0, rnd() * 650 | 0, 2, '#fff', .75);
+  $('#holo-bits').innerHTML = b;
+}
+
+decorateWalls();
 selectMethod('V60');
 buildDrinks();
 renderBrews(); renderBin();
