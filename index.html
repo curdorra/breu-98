@@ -281,17 +281,17 @@ body.fx .lcd .big { text-shadow: 0 0 6px color-mix(in srgb, var(--lcd-fg) 60%, t
           <rect x="12" y="60" width="236" height="12" fill="#d6e9ff"/><rect x="40" y="72" width="170" height="6" fill="#c3dcfa"/>
         </g>
       </defs>
-      <circle cx="870" cy="110" r="130" fill="url(#sun)" shape-rendering="auto"/>
-      <g fill="none" stroke-width="9" opacity=".5">
+      <g data-ax="870" data-ay="110"><circle cx="870" cy="110" r="130" fill="url(#sun)" shape-rendering="auto"/></g>
+      <g fill="none" stroke-width="9" opacity=".5" data-ax="430" data-ay="545" data-s=".62">
         <path d="M200 545 A230 230 0 0 1 660 545" stroke="#ff9ec8"/><path d="M209 545 A221 221 0 0 1 651 545" stroke="#ffd59e"/>
         <path d="M218 545 A212 212 0 0 1 642 545" stroke="#fff3a0"/><path d="M227 545 A203 203 0 0 1 633 545" stroke="#b8f0c8"/>
         <path d="M236 545 A194 194 0 0 1 624 545" stroke="#a8d8ff"/><path d="M245 545 A185 185 0 0 1 615 545" stroke="#c9a8f0"/>
       </g>
       <g opacity=".55">
-        <g class="drift slow"><use href="#cl" transform="translate(140 300) scale(.6)"/></g>
-        <g class="drift"><use href="#cl" transform="translate(460 170) scale(.45)"/></g>
+        <g data-ax="218" data-ay="324"><g class="drift slow"><use href="#cl" transform="translate(140 300) scale(.6)"/></g></g>
+        <g data-ax="518" data-ay="188"><g class="drift"><use href="#cl" transform="translate(460 170) scale(.45)"/></g></g>
       </g>
-      <g fill="none" stroke="#5a7fb8" stroke-width="2" opacity=".6">
+      <g fill="none" stroke="#5a7fb8" stroke-width="2" opacity=".6" data-ax="565" data-ay="222">
         <path d="M560 230 l6 5 l6 -5"/><path d="M580 220 l5 4 l5 -4"/><path d="M548 212 l4 3 l4 -3"/>
       </g>
       <rect x="0" y="540" width="1000" height="160" fill="url(#sg)"/>
@@ -299,8 +299,8 @@ body.fx .lcd .big { text-shadow: 0 0 6px color-mix(in srgb, var(--lcd-fg) 60%, t
       <rect x="0" y="538" width="1000" height="3" fill="#fff" opacity=".7"/>
       <g id="sky-sparkles"></g>
       <g opacity=".8">
-        <g class="drift"><use href="#cl" transform="translate(600 70)"/></g>
-        <g class="drift slow"><use href="#cl" transform="translate(690 440) scale(.8)"/></g>
+        <g data-ax="730" data-ay="100" data-s=".75"><g class="drift"><use href="#cl" transform="translate(600 70)"/></g></g>
+        <g data-ax="794" data-ay="470" data-s=".75"><g class="drift slow"><use href="#cl" transform="translate(690 440) scale(.8)"/></g></g>
         <g class="drift"><use href="#cl" transform="translate(-40 610) scale(.9)"/></g>
       </g>
     </svg>
@@ -311,23 +311,24 @@ body.fx .lcd .big { text-shadow: 0 0 6px color-mix(in srgb, var(--lcd-fg) 60%, t
       <defs><linearGradient id="ss" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#fff" stop-opacity="0"/><stop offset="1" stop-color="#fff"/></linearGradient></defs>
       <rect width="1000" height="700" fill="url(#dg)"/>
       <g id="dream-stars" fill="#fff"></g>
-      <line x1="540" y1="120" x2="650" y2="62" stroke="url(#ss)" stroke-width="3" shape-rendering="auto"/>
-      <rect x="648" y="59" width="6" height="6" fill="#fff"/>
-      <circle cx="760" cy="170" r="70" fill="#fff" opacity=".18" shape-rendering="auto"/>
-      <circle cx="760" cy="170" r="62" fill="#fff7fd"/><circle cx="790" cy="150" r="58" fill="#c9aef0"/>
-      <g transform="translate(200 150)">
+      <g data-ax="600" data-ay="90" data-ty="215"><line x1="540" y1="120" x2="650" y2="62" stroke="url(#ss)" stroke-width="3" shape-rendering="auto"/>
+      <rect x="648" y="59" width="6" height="6" fill="#fff"/></g>
+      <g data-ax="770" data-ay="165" data-s=".8" data-ty="245"><circle cx="760" cy="170" r="70" fill="#fff" opacity=".18" shape-rendering="auto"/>
+      <circle cx="760" cy="170" r="62" fill="#fff7fd"/><circle cx="790" cy="150" r="58" fill="#c9aef0"/></g>
+      <g data-ax="200" data-ay="150" data-ty="275"><g transform="translate(200 150)">
         <circle r="24" fill="#f7c6de"/><rect x="-24" y="-3" width="48" height="5" fill="#e6a4cc"/><rect x="-20" y="8" width="40" height="4" fill="#e6a4cc"/>
         <ellipse rx="44" ry="9" fill="none" stroke="#fff" stroke-width="3" opacity=".85" transform="rotate(-18)" shape-rendering="auto"/>
-      </g>
+      </g></g>
       <g id="dream-city" opacity=".85"></g>
       <g fill="#9a7fe0" opacity=".75"><rect x="0" y="560" width="1000" height="140"/><rect x="40" y="530" width="220" height="30"/><rect x="90" y="505" width="120" height="25"/><rect x="560" y="520" width="300" height="40"/><rect x="620" y="490" width="160" height="30"/></g>
       <g fill="#b99af0" opacity=".8"><rect x="0" y="610" width="1000" height="90"/><rect x="300" y="585" width="240" height="25"/><rect x="820" y="590" width="180" height="20"/></g>
+      <g data-ax="910" data-ay="400">
       <g fill="#5f46ad"><rect x="905" y="250" width="9" height="400"/><rect x="872" y="272" width="76" height="6"/><rect x="884" y="300" width="52" height="5"/>
         <rect x="874" y="266" width="4" height="6"/><rect x="942" y="266" width="4" height="6"/><rect x="886" y="294" width="4" height="6"/><rect x="930" y="294" width="4" height="6"/></g>
       <g fill="none" stroke="#5f46ad" stroke-width="2" opacity=".85" shape-rendering="auto">
         <path d="M876 268 Q 560 360 -20 300"/><path d="M944 268 Q 985 292 1020 290"/>
         <path d="M888 296 Q 560 400 -20 350"/><path d="M932 296 Q 980 322 1020 320"/>
-      </g>
+      </g></g>
       <g fill="#fbe3f5" opacity=".7">
         <g class="drift slow"><rect x="120" y="330" width="90" height="12"/><rect x="100" y="342" width="150" height="12"/><rect x="130" y="354" width="80" height="8" fill="#e9c6ef"/></g>
         <g class="drift"><rect x="420" y="250" width="70" height="10"/><rect x="400" y="260" width="120" height="10"/></g>
@@ -353,9 +354,9 @@ body.fx .lcd .big { text-shadow: 0 0 6px color-mix(in srgb, var(--lcd-fg) 60%, t
       <rect x="-150" y="-150" width="1300" height="1000" fill="url(#hg)" filter="url(#warp)"/>
       <rect width="1000" height="700" fill="url(#gloss)"/>
       <g opacity=".22" shape-rendering="crispEdges">
-        <g transform="translate(640 50)"><rect width="300" height="200" fill="#fff"/><rect x="3" y="3" width="294" height="16" fill="#0b4fd1"/><rect x="8" y="26" width="284" height="166" fill="#b9d4ff"/></g>
-        <g transform="translate(560 320)"><rect width="220" height="150" fill="#fff"/><rect x="3" y="3" width="214" height="16" fill="#ff8ab8"/><rect x="8" y="26" width="204" height="116" fill="#e6d4ff"/></g>
-        <g transform="translate(820 290)"><rect width="150" height="70" fill="#fff"/><rect x="3" y="3" width="144" height="14" fill="#0b4fd1"/><rect x="12" y="30" width="16" height="16" fill="#ff5a7a"/><rect x="38" y="34" width="90" height="4" fill="#4d4b60"/><rect x="38" y="42" width="60" height="4" fill="#4d4b60"/></g>
+        <g data-ax="790" data-ay="150" data-s=".6" data-ty="265"><g transform="translate(640 50)"><rect width="300" height="200" fill="#fff"/><rect x="3" y="3" width="294" height="16" fill="#0b4fd1"/><rect x="8" y="26" width="284" height="166" fill="#b9d4ff"/></g></g>
+        <g data-ax="670" data-ay="395" data-s=".6" data-ty="480"><g transform="translate(560 320)"><rect width="220" height="150" fill="#fff"/><rect x="3" y="3" width="214" height="16" fill="#ff8ab8"/><rect x="8" y="26" width="204" height="116" fill="#e6d4ff"/></g></g>
+        <g data-ax="895" data-ay="325" data-s=".7" data-ty="385"><g transform="translate(820 290)"><rect width="150" height="70" fill="#fff"/><rect x="3" y="3" width="144" height="14" fill="#0b4fd1"/><rect x="12" y="30" width="16" height="16" fill="#ff5a7a"/><rect x="38" y="34" width="90" height="4" fill="#4d4b60"/><rect x="38" y="42" width="60" height="4" fill="#4d4b60"/></g></g>
       </g>
       <g id="holo-bits" shape-rendering="auto"></g>
     </svg>
@@ -550,7 +551,8 @@ body.fx .lcd .big { text-shadow: 0 0 6px color-mix(in srgb, var(--lcd-fg) 60%, t
   <fieldset class="grp"><legend>Effects</legend>
     <label style="display:flex; gap:8px; align-items:center; margin-bottom:6px;"><input type="checkbox" id="opt-fx"> Retro screen (scanlines, grain, RGB split)</label>
     <label style="display:flex; gap:8px; align-items:center; margin-bottom:6px;"><input type="checkbox" id="opt-pop"> Silly error popups</label>
-    <label style="display:flex; gap:8px; align-items:center;"><input type="checkbox" id="opt-snd"> Sound effects</label>
+    <label style="display:flex; gap:8px; align-items:center; margin-bottom:6px;"><input type="checkbox" id="opt-snd"> Sound effects</label>
+    <label style="display:flex; gap:8px; align-items:center;"><input type="checkbox" id="opt-boot"> Show startup screen every time</label>
   </fieldset>
 </template>
 
@@ -1311,10 +1313,10 @@ function makeWin(id) {
     const b = e.target.closest('[data-act]'); if (!b) return;
     sfx('click');
     if (b.dataset.act === 'min') minWin(id);
-    else if (b.dataset.act === 'max') el.classList.toggle('max');
+    else if (b.dataset.act === 'max') { el.classList.toggle('max'); saveLayout(); }
     else closeWin(id);
   });
-  el.querySelector('.win-title').addEventListener('dblclick', e => { if (!e.target.closest('button')) el.classList.toggle('max'); });
+  el.querySelector('.win-title').addEventListener('dblclick', e => { if (!e.target.closest('button')) { el.classList.toggle('max'); saveLayout(); } });
   el.querySelector('.win-menu')?.addEventListener('click', e => {
     const b = e.target.closest('[data-menu]'); if (b) { sfx('click'); A.menu[+b.dataset.menu][1](); }
   });
@@ -1341,7 +1343,7 @@ function dragify(el, handle, mode) {
         el.style.height = Math.max(140, r0.h + dy) + 'px';
       }
     };
-    const up = () => { handle.removeEventListener('pointermove', move); handle.removeEventListener('pointerup', up); };
+    const up = () => { handle.removeEventListener('pointermove', move); handle.removeEventListener('pointerup', up); saveLayout(); };
     handle.addEventListener('pointermove', move);
     handle.addEventListener('pointerup', up);
   });
@@ -1370,13 +1372,49 @@ function focusWin(id) {
   focusedId = id;
   $$('.win:not(.dlg)').forEach(w => w.classList.toggle('focused', w.id === 'w-' + id));
   $('#w-' + id).style.zIndex = ++zTop;
-  renderTasks();
+  renderTasks(); saveLayout();
 }
-function minWin(id) { $('#w-' + id).hidden = true; winState[id] = 'min'; if (focusedId === id) focusedId = null; renderTasks(); }
+function minWin(id) { $('#w-' + id).hidden = true; winState[id] = 'min'; if (focusedId === id) focusedId = null; renderTasks(); saveLayout(); }
 function closeWin(id) {
   $('#w-' + id).hidden = true; winState[id] = 'closed';
   if (focusedId === id) focusedId = null;
-  sfx('close'); APPS[id].onClose?.(); renderTasks();
+  sfx('close'); APPS[id].onClose?.(); renderTasks(); saveLayout();
+}
+
+let layoutTimer;
+function saveLayout() {
+  clearTimeout(layoutTimer);
+  layoutTimer = setTimeout(() => {
+    const wins = {};
+    Object.keys(APPS).forEach(id => {
+      if (!winState[id] || winState[id] === 'closed') return;
+      const el = $('#w-' + id), px = v => parseInt(v, 10) || null;
+      wins[id] = { s: winState[id], x: px(el.style.left), y: px(el.style.top), w: px(el.style.width), h: px(el.style.height),
+                   max: el.classList.contains('max'), z: +el.style.zIndex || 0 };
+    });
+    store.set('layout', { wins, focus: focusedId });
+  }, 250);
+}
+function restoreLayout() {
+  const L = store.get('layout', null);
+  const ids = L && L.wins ? Object.keys(L.wins).filter(id => APPS[id]).sort((a, b) => L.wins[a].z - L.wins[b].z) : [];
+  if (!ids.length) return false;
+  const d = $('#desktop');
+  ids.forEach(id => {
+    const g = L.wins[id], el = $('#w-' + id), A = APPS[id];
+    const w = Math.min(g.w || A.w, d.clientWidth - 12), h = Math.min(g.h || A.h, d.clientHeight - 12);
+    el.style.width = w + 'px'; el.style.height = h + 'px';
+    el.style.left = Math.max(60 - w, Math.min(g.x ?? A.x, d.clientWidth - 60)) + 'px';
+    el.style.top  = Math.max(0, Math.min(g.y ?? A.y, d.clientHeight - 30)) + 'px';
+    el.classList.toggle('max', !!g.max);
+    el.style.zIndex = ++zTop;
+    placed[id] = true;
+    winState[id] = g.s === 'min' ? 'min' : 'open';
+    el.hidden = winState[id] !== 'open';
+  });
+  const f = winState[L.focus] === 'open' ? L.focus : ids.filter(id => winState[id] === 'open').pop();
+  if (f) focusWin(f); else renderTasks();
+  return true;
 }
 function setStatus(id, text) { const s = $('#st-' + id); if (s) s.textContent = text; }
 
@@ -1494,8 +1532,10 @@ const POPS = {
     { t: "fatal error: channelling detected. the water took a shortcut.", b: ['cry', 'fix my puck', 'ok'] },
   ],
 };
-function silly(pop, sound = 'error') {
-  if (!settings.pop || dlgOpen) return;
+const seenPops = new Set();
+function silly(pop, sound = 'error', key) {
+  if (!settings.pop || dlgOpen || seenPops.has(key)) return;
+  seenPops.add(key);
   dialog({ title: sound === 'yay' ? 'Message' : 'Error', text: pop.t, buttons: pop.b, sound });
 }
 
@@ -1507,11 +1547,14 @@ function finishBoot() {
   const b = $('#boot'); b.classList.add('out');
   setTimeout(() => { b.hidden = true; }, 420);
   sfx('chime');
-  openApp('brew');
+  store.set('visited', true);
+  if (!restoreLayout()) openApp('brew');
 }
-function boot() {
+function boot(force) {
   booted = false;
-  const b = $('#boot'); b.hidden = false; b.classList.remove('out');
+  const b = $('#boot');
+  if (!force && !settings.bootEvery && store.get('visited', false)) { b.hidden = true; finishBoot(); return; }
+  b.hidden = false; b.classList.remove('out');
   setTimeout(finishBoot, 1900);
 }
 $('#boot').addEventListener('click', finishBoot);
@@ -1522,7 +1565,7 @@ async function shutDown() {
   Object.keys(APPS).forEach(id => { if (winState[id] && winState[id] !== 'closed') closeWin(id); });
   $('#shutdown').hidden = false;
 }
-$('#shutdown').addEventListener('click', () => { $('#shutdown').hidden = true; boot(); });
+$('#shutdown').addEventListener('click', () => { $('#shutdown').hidden = true; boot(true); });
 
 // ── BUILD WINDOWS ─────────────────────────────────────────────────────────────
 
@@ -1730,16 +1773,15 @@ $('#sym-chips').addEventListener('click', e => {
   $('#fix-list').innerHTML = s.fixes.map(f => `<li><span class="n">→</span><span>${esc(f)}</span></li>`).join('');
   setStatus('fix', `${s.tag} → ${s.cause}`);
   sfx('click');
-  silly(POPS.sym[i]);
+  silly(POPS.sym[i], 'error', 'sym' + i);
 });
 
 // ── MEASURE ───────────────────────────────────────────────────────────────────
 
-let lastVerdict = null, verdictTimer;
+let lastVerdict = null;
 function calcEY() {
   const tds = parseFloat($('#ey-tds').value), dose = parseFloat($('#ey-dose').value), bev = parseFloat($('#ey-bev').value);
   const th = $('#ey-thumb'), dot = $('#chart-dot');
-  clearTimeout(verdictTimer);
   if (!tds || !dose || !bev) {
     $('#ey-val').textContent = '—'; $('#ey-verdict').hidden = true;
     th.style.opacity = '0'; dot.setAttribute('opacity', '0');
@@ -1760,13 +1802,13 @@ function calcEY() {
   if (cx >= 52 && cx <= 372 && cy >= 16 && cy <= 228) { dot.setAttribute('transform', `translate(${cx.toFixed(1)} ${cy.toFixed(1)})`); dot.setAttribute('opacity', '1'); }
   else dot.setAttribute('opacity', '0');
   setStatus('measure', `EY ${ey.toFixed(1)}% · TDS ${tds}% · ${label}`);
-
-  if (key !== lastVerdict) {
-    verdictTimer = setTimeout(() => { lastVerdict = key; silly(pick(POPS[key]), key === 'ideal' ? 'yay' : 'error'); }, 1100);
-  }
+  lastVerdict = key;
 }
 function clearEY() { ['#ey-tds', '#ey-dose', '#ey-bev'].forEach(s => { $(s).value = ''; }); calcEY(); }
-['#ey-tds', '#ey-dose', '#ey-bev'].forEach(s => $(s).addEventListener('input', calcEY));
+['#ey-tds', '#ey-dose', '#ey-bev'].forEach(s => {
+  $(s).addEventListener('input', calcEY);
+  $(s).addEventListener('change', () => { if (lastVerdict) silly(pick(POPS[lastVerdict]), lastVerdict === 'ideal' ? 'yay' : 'error', 'ey-' + lastVerdict); });
+});
 
 // ── DISPLAY PROPERTIES ────────────────────────────────────────────────────────
 
@@ -1787,6 +1829,7 @@ function applySettings() {
     </button>`).join('');
   $('#opt-fx').checked = settings.fx;
   $('#opt-pop').checked = settings.pop;
+  $('#opt-boot').checked = !!settings.bootEvery;
   renderSoundBtn();
 }
 $('#theme-list').addEventListener('click', e => {
@@ -1797,6 +1840,7 @@ $('#theme-list').addEventListener('click', e => {
 $('#opt-fx').addEventListener('change', e => { settings.fx = e.target.checked; saveSettings(); applySettings(); });
 $('#opt-pop').addEventListener('change', e => { settings.pop = e.target.checked; saveSettings(); });
 $('#opt-snd').addEventListener('change', e => { settings.snd = e.target.checked; saveSettings(); renderSoundBtn(); sfx('click'); });
+$('#opt-boot').addEventListener('change', e => { settings.bootEvery = e.target.checked; saveSettings(); });
 
 // ── MUSIC PLAYER (original chiptune loops) ────────────────────────────────────
 
@@ -1873,15 +1917,38 @@ APPS.music.onClose = mpStop;
 
 // ── INIT ──────────────────────────────────────────────────────────────────────
 
-function decorateWalls() {
+function wallRange() {
+  const d = $('#desktop');
+  const vis = Math.min(1000, 700 * d.clientWidth / Math.max(1, d.clientHeight));
+  const tall = vis < 700;
+  const iconStrip = tall ? 0 : 100 * 700 / Math.max(1, d.clientHeight);
+  return { x0: 500 - vis / 2, vis, tall, lo: 500 - vis / 2 + iconStrip, hi: 500 + vis / 2, top: tall ? 200 : 0 };
+}
+function layoutWalls() {
+  const R = wallRange();
+  $$('.wall [data-ax]').forEach(g => {
+    if (R.vis >= 1000) { g.removeAttribute('transform'); return; }
+    const ax = +g.dataset.ax, ay = +g.dataset.ay, sc = R.tall ? +(g.dataset.s || 1) : 1;
+    const nx = R.x0 + ax / 1000 * R.vis, ny = R.tall && g.dataset.ty ? +g.dataset.ty : ay;
+    g.setAttribute('transform', `translate(${nx.toFixed(1)} ${ny}) scale(${sc}) translate(${-ax} ${-ay})`);
+  });
+  decorateWalls(R);
+}
+let wallTimer;
+addEventListener('resize', () => { clearTimeout(wallTimer); wallTimer = setTimeout(layoutWalls, 200); });
+
+function decorateWalls(R) {
   let s = 7;
   const rnd = () => (s = (s * 16807) % 2147483647) / 2147483647;
+  const X = (pad = 0) => R.lo + pad + rnd() * (R.hi - R.lo - 2 * pad) | 0;
+  const Y = (a, b) => Math.max(R.top, a) + rnd() * (b - Math.max(R.top, a)) | 0;
+  const n = k => Math.max(4, Math.round(k * (R.hi - R.lo) / 850));
   const spark = (x, y, u, c, o) => `<g fill="${c}" opacity="${o.toFixed(2)}"><rect x="${x}" y="${y - 2 * u}" width="${u}" height="${5 * u}"/><rect x="${x - 2 * u}" y="${y}" width="${5 * u}" height="${u}"/></g>`;
   const heart = (x, y, k) => `<path transform="translate(${x} ${y}) scale(${k.toFixed(2)})" fill="#ffb3d6" d="M-6 -4h4v-2h4v2h4v4h-2v2h-2v2h-2v2h-2v-2h-2v-2h-2v-2h-2z"/>`;
 
   let h = '';
-  for (let i = 0; i < 24; i++) h += spark(150 + rnd() * 850 | 0, rnd() * 500 | 0, rnd() < .3 ? 3 : 2, rnd() < .5 ? '#fff' : '#ffd6ec', .55 + rnd() * .4);
-  for (let i = 0; i < 6; i++) h += heart(150 + rnd() * 850 | 0, 60 + rnd() * 420 | 0, .8 + rnd() * .6);
+  for (let i = 0, N = n(24); i < N; i++) h += spark(X(10), Y(0, 500), rnd() < .3 ? 3 : 2, rnd() < .5 ? '#fff' : '#ffd6ec', .55 + rnd() * .4);
+  for (let i = 0, N = n(6); i < N; i++) h += heart(X(10), Y(60, 480), .8 + rnd() * .6);
   $('#sky-sparkles').innerHTML = h;
 
   let g = '';
@@ -1890,8 +1957,8 @@ function decorateWalls() {
   $('#sky-grid').innerHTML = g;
 
   let st = '';
-  for (let i = 0; i < 70; i++) { const z = rnd() < .8 ? 2 : 4; st += `<rect x="${rnd() * 1000 | 0}" y="${rnd() * 440 | 0}" width="${z}" height="${z}" opacity="${(.4 + rnd() * .6).toFixed(2)}"/>`; }
-  for (let i = 0; i < 8; i++) st += spark(150 + rnd() * 850 | 0, 20 + rnd() * 380 | 0, 2, '#fff', .9);
+  for (let i = 0, N = n(70); i < N; i++) { const z = rnd() < .8 ? 2 : 4; st += `<rect x="${X()}" y="${rnd() * 440 | 0}" width="${z}" height="${z}" opacity="${(.4 + rnd() * .6).toFixed(2)}"/>`; }
+  for (let i = 0, N = n(8); i < N; i++) st += spark(X(10), Y(20, 400), 2, '#fff', .9);
   $('#dream-stars').innerHTML = st;
 
   let c = '', x = -10;
@@ -1906,12 +1973,12 @@ function decorateWalls() {
   $('#dream-city').innerHTML = c;
 
   let b = '';
-  for (let i = 0; i < 9; i++) b += `<circle cx="${200 + rnd() * 800 | 0}" cy="${rnd() * 650 | 0}" r="${14 + rnd() * 46 | 0}" fill="url(#bub)" stroke="url(#iri)" stroke-width="2" opacity=".75"/>`;
-  for (let i = 0; i < 16; i++) b += spark(150 + rnd() * 850 | 0, rnd() * 650 | 0, 2, '#fff', .75);
+  for (let i = 0, N = n(9); i < N; i++) { const r = 14 + rnd() * (R.tall ? 30 : 46) | 0; b += `<circle cx="${X(r)}" cy="${Y(r, 650)}" r="${r}" fill="url(#bub)" stroke="url(#iri)" stroke-width="2" opacity=".75"/>`; }
+  for (let i = 0, N = n(16); i < N; i++) b += spark(X(10), Y(0, 650), 2, '#fff', .75);
   $('#holo-bits').innerHTML = b;
 }
 
-decorateWalls();
+layoutWalls();
 selectMethod('V60');
 buildDrinks();
 renderBrews(); renderBin();
